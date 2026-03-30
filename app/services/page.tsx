@@ -58,7 +58,7 @@ const services = [
       "Odour elimination",
       "Quick turnaround",
     ],
-    price: "From KES 1,500",
+    price: "From KES 600",
   },
   {
     title: "Mattress Cleaning",
