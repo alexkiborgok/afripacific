@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   title: "Afripacific Cleaning Services | Nairobi",
   description:
     "Professional cleaning services in Nairobi — residential, office, carpet, sofa, car detailing, fumigation and more.",
+  icons: {
+    icon: [
+      { url: "/icons/favicon.ico" }
+    ],
+    shortcut: ["/icons/favicon.ico"],
+  },
 };
 
 export default function RootLayout({
