@@ -45,7 +45,7 @@ const services = [
       "Fast drying",
       "Deodorizing",
     ],
-    price: "From KES 1,500",
+    price: "From KES 600",
   },
   {
     title: "Sofa Cleaning",
