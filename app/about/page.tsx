@@ -21,17 +21,17 @@ const team = [
     name: "Sharky",
     role: "Founder & Operations",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+      "/sharky.jpg",
   },
   {
     name: "Biko",
-    role: "Client Relations",
+    role: "Service operations manager",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
   },
   {
-    name: "Bazuu",
-    role: "Lead Cleaner",
+    name: "Omar",
+    role: "Service operations manager",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
   },
@@ -70,7 +70,7 @@ export default function AboutPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                We Started in 2024
+                We Started in 2023
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed text-sm">
                 <p>
@@ -93,7 +93,7 @@ export default function AboutPage() {
               </div>
               <div className="mt-6 grid grid-cols-3 gap-4 text-center">
                 {[
-                  ["1+", "Year Running"],
+                  ["2+", "Year Running"],
                   ["200+", "Jobs Done"],
                   ["50+", "Happy Clients"],
                 ].map(([v, l]) => (

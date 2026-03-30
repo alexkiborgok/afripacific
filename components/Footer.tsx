@@ -19,7 +19,7 @@ export default function Footer() {
             </span>
           </Link>
           <p className="text-sm leading-relaxed max-w-xs">
-            A young, passionate cleaning company serving Nairobi since 2024. We
+            A young, passionate cleaning company serving Nairobi since 2023. We
             take pride in every job, no matter how big or small.
           </p>
           <div className="mt-5 space-y-2 text-sm">
@@ -28,8 +28,7 @@ export default function Footer() {
               Kenya
             </div>
             <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-primary-400 shrink-0" /> +254 700
-              000 000
+              <Phone className="w-4 h-4 text-primary-400 shrink-0" /> +25421977882
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-primary-400 shrink-0" />{" "}
