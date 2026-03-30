@@ -238,7 +238,7 @@ const submit = async (e: React.FormEvent) => {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/254700000000"
+                href="https://wa.me/254721977882?text=Hello%20Afripacific!%20I%20have%20a%20question%20about%20your%20cleaning%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-green-500 text-white rounded-2xl p-5 hover:bg-green-600 transition-colors"
