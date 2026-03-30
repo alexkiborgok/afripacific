@@ -12,7 +12,7 @@ import {
 
 const details = [
   { icon: MapPin, label: "Location", lines: ["Nairobi, Kenya"] },
-  { icon: Phone, label: "Phone / WhatsApp", lines: ["+254 700 000 000"] },
+  { icon: Phone, label: "Phone / WhatsApp", lines: ["+254 721977882"] },
   { icon: Mail, label: "Email", lines: ["info@afripacific.co.ke"] },
   {
     icon: Clock,
@@ -49,13 +49,39 @@ export default function ContactPage() {
     >,
   ) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    await new Promise((r) => setTimeout(r, 1000));
-    setSent(true);
+const submit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!form.name || !form.phone || !form.service) {
+    alert("Please fill all required fields");
+    return;
+  }
+
+  const phoneNumber = "254721977882";
+
+  const message = `
+  *NEW CLEANING REQUEST*
+
+  👤 *Name:* ${form.name}
+  📞 *Phone:* ${form.phone}
+  🧹 *Service:* ${form.service}
+
+  📝 *Details:*
+  ${form.message || "No additional details"}
+  `;
+
+  const encodedMessage = encodeURIComponent(message);
+
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  setLoading(true);
+  setTimeout(() => {
+    window.open(whatsappUrl, "_blank");
     setLoading(false);
-  };
+  }, 500);
+
+  setSent(true);
+};
 
   return (
     <>
