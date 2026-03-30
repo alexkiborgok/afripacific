@@ -28,7 +28,7 @@ export default function Footer() {
               Kenya
             </div>
             <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-primary-400 shrink-0" /> +25421977882
+              <Phone className="w-4 h-4 text-primary-400 shrink-0" /> +254721977882
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-primary-400 shrink-0" />{" "}
