@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Afripacific Cleaning Services
 
-## Getting Started
+A clean, responsive Next.js 14 website for **Afripacific** — a Nairobi-based cleaning company.
 
-First, run the development server:
+---
 
+## Installation
+
+### 1. Install dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd afripacific
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Start development server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Build for production
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Deploy to Vercel (Easiest)
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install -g vercel
+vercel
+```
+Follow the prompts. Your site will be live in ~1 minute.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy to Cloudflare Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Option A — Dashboard
+1. Push code to GitHub
+2. Cloudflare Dashboard → Pages → Connect to Git
+3. Build command: `npm run build`
+4. Output directory: `.next`
+5. Node version env var: `NODE_VERSION = 18`
 
-## Deploy on Vercel
+### Option B — CLI
+```bash
+npm install -g wrangler
+wrangler login
+npm run build
+wrangler pages deploy .next
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Pages
+
+| Route       | Page        |
+|-------------|-------------|
+| `/`         | Home        |
+| `/services` | Services    |
+| `/about`    | About Us    |
+| `/contact`  | Contact     |
+
+---
+
+## Customise
+
+| What              | Where                                    |
+|-------------------|------------------------------------------|
+| Company name/logo | `src/components/Navbar.tsx`, `Footer.tsx`|
+| Phone / email     | `src/components/Footer.tsx`, `contact/page.tsx` |
+| Service list      | `src/app/services/page.tsx`              |
+| Team members      | `src/app/about/page.tsx`                 |
+| Colors            | `tailwind.config.ts` → `primary`         |
+
+---
+
+## Tech Stack
+- **Next.js 14** — App Router
+- **TypeScript**
+- **Tailwind CSS v3**
+- **Lucide React** — icons
+- **Unsplash** — placeholder images
